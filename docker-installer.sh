@@ -2,10 +2,10 @@
 
 # requires Debian/Ubuntu Linux
 
+# run as: $ curl -s https://raw.githubusercontent.com/eaz/docker-installer-script/main/docker-installer.sh | bash -s 
+
 sudo apt update
 sudo apt upgrade
-
-sudo -y install curl
 
 curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && rm get-docker.sh
 
