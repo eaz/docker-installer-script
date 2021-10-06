@@ -7,7 +7,9 @@
 sudo apt update
 sudo apt upgrade
 
-curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && rm get-docker.sh
+curl -fsSL https://get.docker.com -o get-docker.sh 
+sh get-docker.sh 
+rm get-docker.sh
 
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
