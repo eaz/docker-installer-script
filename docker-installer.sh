@@ -11,7 +11,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 bash -s get-docker.sh
 rm get-docker.sh
 
-sudo sed -i 's+ExecStart=/usr/bin/dockerd+ExecStart=/usr/bin/dockerd -H tcp://127.0.0.1:20202+' /lib/systemd/system/docker.service
+sudo sed -i 's+ExecStart=/usr/bin/dockerd+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:20202+' /lib/systemd/system/docker.service
 
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
