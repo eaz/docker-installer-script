@@ -12,8 +12,10 @@
 sudo apt -y update
 sudo apt upgrade
 
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
 curl -fsSL https://get.docker.com -o get-docker.sh
-bash -s get-docker.sh
+sudo sh get-docker.sh
 rm get-docker.sh
 
 sudo sed -i 's+ExecStart=/usr/bin/dockerd+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:20202+' /lib/systemd/system/docker.service
